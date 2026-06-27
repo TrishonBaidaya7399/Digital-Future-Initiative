@@ -43,7 +43,7 @@ export async function generateMetadata({
       locale: locale === "bn" ? "bn_BD" : "en_US",
       images: [
         {
-          url: "/opengraph-image.jpg",
+          url: "/hero-banner.jpg",
           width: 1200,
           height: 630,
           alt: dict.meta.title,
