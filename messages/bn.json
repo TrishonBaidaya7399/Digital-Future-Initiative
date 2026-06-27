@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "একটি কম্পিউটার, একটি ভবিষ্যৎ | Digital Future Initiative",
+    "description": "Sanatani SSC 91-এর উদ্যোগে এতিম শিশুদের জন্য Computer Lab, AI, Web Development ও Digital Skill Training গড়ে তোলার লক্ষ্যে আমাদের এই উদ্যোগে অংশ নিন। আপনার ছোট্ট অনুদান একটি শিশুর ভবিষ্যৎ বদলে দিতে পারে।",
+    "keywords": "orphan donation, computer donation, bangladesh charity, education donation, AI training, web development, orphan computer lab, digital education, Sanatani SSC 91"
+  },
+  "nav": {
+    "home": "হোম",
+    "why": "কেন এই উদ্যোগ?",
+    "vision": "স্বপ্ন",
+    "roadmap": "পরিকল্পনা",
+    "impact": "প্রভাব",
+    "donate": "দান করুন",
+    "transparency": "স্বচ্ছতা",
+    "faq": "প্রশ্নাবলী",
+    "volunteer": "স্বেচ্ছাসেবক",
+    "initiatedBy": "Initiated By Sanatani SSC 91"
+  },
+  "hero": {
+    "badge": "Initiated By Sanatani SSC 91",
+    "heading": "প্রত্যেক শিশুর মধ্যেই লুকিয়ে আছে অসীম সম্ভাবনা।",
+    "subtext": "আজ সুযোগের অভাবে যে শিশুটি পিছিয়ে আছে, আগামীকাল সঠিক প্রশিক্ষণ পেলে সেই শিশুই হতে পারে একজন AI Engineer, Web Developer অথবা একজন সফল Freelancer। আমাদের লক্ষ্য— এই শিশুদের হাতে শুধুমাত্র দান তুলে দেওয়া নয়, বরং এমন একটি দক্ষতা তুলে দেওয়া, যা সারাজীবন তাদের পাশে থাকবে।",
+    "donateBtn": "❤️ এখনই দান করুন",
+    "planBtn": "📖 আমাদের পরিকল্পনা দেখুন"
+  },
+  "whyWeStarted": {
+    "title": "কেন এই উদ্যোগ?",
+    "content": "বাংলাদেশের বিভিন্ন অনাথ আশ্রমে অসংখ্য মেধাবী শিশু রয়েছে। কিন্তু— তাদের কাছে নেই Computer, Laptop, Proper Guidance, Modern Education, Technology Learning Opportunity। ফলে অনেক প্রতিভা অকালেই হারিয়ে যায়। আমরা সেই চিত্র বদলাতে চাই।",
+    "items": [
+      { "label": "Computer", "desc": "প্রয়োজনীয় কম্পিউটার সরঞ্জামের অভাব" },
+      { "label": "Laptop", "desc": "ল্যাপটপের অভাবে শিক্ষা ব্যাহত" },
+      { "label": "Proper Guidance", "desc": "সঠিক দিকনির্দেশনার অভাব" },
+      { "label": "Modern Education", "desc": "আধুনিক শিক্ষার সুযোগ নেই" },
+      { "label": "Technology Learning", "desc": "টেকনোলজি শেখার সুযোগ সীমিত" }
+    ]
+  },
+  "vision": {
+    "title": "আমাদের স্বপ্ন",
+    "content": "আগামী পাঁচ বছরে অন্তত একটি অনাথ আশ্রমকে সম্পূর্ণভাবে ডিজিটাল শিক্ষা ব্যবস্থার আওতায় নিয়ে আসা।",
+    "items": [
+      "Computer Lab",
+      "High Speed Internet",
+      "AI Learning",
+      "Web Development",
+      "Freelancing",
+      "English Communication",
+      "Career Guideline"
+    ]
+  },
+  "roadmap": {
+    "title": "আমাদের পথ",
+    "phases": [
+      {
+        "name": "পর্যায় ১",
+        "title": "ইনফ্রাস্ট্রাকচার",
+        "items": ["Computer সংগ্রহ", "Laptop সংগ্রহ", "Projector", "Networking"]
+      },
+      {
+        "name": "পর্যায় ২",
+        "title": "বেসিক কম্পিউটার",
+        "items": ["Basic Computer", "Typing", "Internet", "Windows", "MS Word", "MS Excel", "PowerPoint", "Google Workspace", "Email"]
+      },
+      {
+        "name": "পর্যায় ৩",
+        "title": "প্রোগ্রামিং",
+        "items": ["Programming", "HTML", "CSS", "JavaScript", "React", "Next.js"]
+      },
+      {
+        "name": "পর্যায় ৪",
+        "title": "অ্যাডভান্সড",
+        "items": ["Advanced", "AI", "ChatGPT", "Prompt Engineering", "Web Development"]
+      },
+      {
+        "name": "পর্যায় ৫",
+        "title": "ক্যারিয়ার",
+        "items": ["Career", "Freelancing", "CV", "Interview", "Communication", "LinkedIn", "Marketplace", "Portfolio"]
+      }
+    ]
+  },
+  "partners": {
+    "title": "ভবিষ্যতে যাদের সাথে কাজ করার পরিকল্পনা",
+    "disclaimer": "আমরা ভবিষ্যতে এসব প্রতিষ্ঠানের সাথে সহযোগিতার চেষ্টা করব। বর্তমানে কোনো আনুষ্ঠানিক অংশীদারিত্ব নেই।",
+    "names": ["Programming Hero", "Ostad", "10 Minute School", "Microsoft Learn", "FreeCodeCamp", "Coursera", "edX"]
+  },
+  "donationImpact": {
+    "title": "আপনার অনুদানের প্রভাব",
+    "cards": [
+      { "amount": "৫০০", "unit": "টাকা", "desc": "একজন শিক্ষার্থীর Computer Training Materials" },
+      { "amount": "১,০০০", "unit": "টাকা", "desc": "একটি Keyboard + Mouse" },
+      { "amount": "৩,০০০", "unit": "টাকা", "desc": "Used Monitor" },
+      { "amount": "৫,০০০", "unit": "টাকা", "desc": "একটি Refurbished Desktop-এর অংশবিশেষ" },
+      { "amount": "20,০০০+", "unit": "", "desc": "Refurbished Laptop" }
+    ]
+  },
+  "donationMethods": {
+    "title": "দান পদ্ধতি",
+    "copy": "কপি করুন",
+    "copied": "কপি হয়েছে!",
+    "merchantAccount": "মার্চেন্ট একাউন্ট নাম্বার",
+    "payment": "পেমেন্ট",
+    "bkash": {
+      "name": "bKash",
+      "number": "০১৮৭৩০০৭৬০০",
+      "merchantName": "ALOR POTHE"
+    },
+    "nogod": {
+      "name": "Nagad",
+      "number": "০১৮৭৩০০৭৬০০",
+      "merchantName": "ALOR POTHE"
+    },
+    "bank": {
+      "name": "Bank Transfer",
+      "accountName": "Digital Future Initiative",
+      "accountNumber": "XXXXXXXXXXXX",
+      "bankName": "XXXXX Bank Ltd",
+      "branch": "XXXXX Branch",
+      "details": "Account Name: Digital Future Initiative\nAccount Number: XXXXXXXXXXXX\nBank: XXXXX Bank Ltd\nBranch: XXXXX"
+    }
+  },
+  "progress": {
+    "title": "আমাদের অগ্রগতি",
+    "computers": {
+      "label": "কম্পিউটার সংগ্রহ",
+      "goal": "লক্ষ্য",
+      "collected": "সংগৃহীত",
+      "need": "আরও প্রয়োজন"
+    },
+    "money": {
+      "label": "অনুদান",
+      "goal": "লক্ষ্য",
+      "collected": "সংগৃহীত"
+    },
+    "transparency": {
+      "title": "স্বচ্ছতা ড্যাশবোর্ড",
+      "reports": "মাসিক রিপোর্ট",
+      "expenses": "ব্যয়ের হিসাব",
+      "photos": "ছবি ও কার্যক্রম",
+      "invoices": "বিল/ইনভয়েস",
+      "equipment": "সরঞ্জাম তালিকা",
+      "drive": "Google Drive রিপোর্ট"
+    }
+  },
+  "gallery": {
+    "title": "ছবিঘর"
+  },
+  "whyDonate": {
+    "title": "কেন দান করবেন?",
+    "items": [
+      { "title": "শিক্ষা", "desc": "মানসম্মত ডিজিটাল শিক্ষার সুযোগ" },
+      { "title": "দক্ষতা", "desc": "জীবনব্যাপী কাজে লাগে এমন দক্ষতা" },
+      { "title": "চাকরি", "desc": "Freelancing ও Employment-এর পথ" },
+      { "title": "ভবিষ্যৎ", "desc": "একটি উজ্জ্বল ভবিষ্যৎ গড়ে তোলা" },
+      { "title": "আত্মবিশ্বাস", "desc": "নিজের পায়ে দাঁড়ানোর শক্তি" },
+      { "title": "ডিজিটাল বাংলাদেশ", "desc": "দেশের প্রতি অবদান রাখা" }
+    ]
+  },
+  "faq": {
+    "title": "সাধারণ প্রশ্নাবলী",
+    "items": [
+      {
+        "q": "অনুদান কীভাবে ব্যবহার করা হয়?",
+        "a": "প্রতিটি অনুদান সরাসরি Computer Lab স্থাপন, ল্যাপটপ ক্রয়, ইন্টারনেট সংযোগ এবং শিক্ষার্থীদের প্রশিক্ষণে ব্যয় করা হয়। মাসিক রিপোর্ট ও বিল আমাদের স্বচ্ছতা ড্যাশবোর্ডে প্রকাশিত হয়।"
+      },
+      {
+        "q": "আমি কি ল্যাপটপ দান করতে পারি?",
+        "a": "হ্যাঁ, অবশ্যই! আমরা কাজের অবস্থায় থাকা যেকোনো Refurbished ল্যাপটপ বা ডেস্কটপ গ্রহণ করি। দয়া করে আমাদের স্বেচ্ছাসেবক ফরম পূরণ করুন অথবা সরাসরি যোগাযোগ করুন।"
+      },
+      {
+        "q": "আমি কি স্বেচ্ছাসেবক হতে পারি?",
+        "a": "আমাদের স্বেচ্ছাসেবক দলে যোগ দিতে পারেন। আপনার দক্ষতা ও সময় অনুযায়ী আমরা আপনাকে কাজ বণ্টন করব। নিচের ফরমটি পূরণ করুন।"
+      },
+      {
+        "q": "আমি কি অনাথ আশ্রম পরিদর্শন করতে পারি?",
+        "a": "হ্যাঁ, আমরা নিয়মিত দাতা ও স্বেচ্ছাসেবকদের জন্য পরিদর্শনের ব্যবস্থা করে থাকি। দয়া করে আগে থেকে যোগাযোগ করুন।"
+      },
+      {
+        "q": "শিক্ষার্থীরা কীভাবে নির্বাচিত হয়?",
+        "a": "অনাথ আশ্রমের কর্তৃপক্ষের সাথে আলোচনা করে আমরা শিক্ষার্থীদের নির্বাচন করি। অগ্রাধিকার পায় যারা মেধাবী এবং শেখার আগ্রহী।"
+      }
+    ]
+  },
+  "volunteer": {
+    "title": "স্বেচ্ছাসেবক হোন",
+    "name": "নাম",
+    "phone": "ফোন",
+    "profession": "পেশা",
+    "skills": "দক্ষতা",
+    "availability": "সময়ের উপলব্ধতা",
+    "submit": "জমা দিন",
+    "success": "আপনার আবেদন জমা হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।"
+  },
+  "footerCTA": {
+    "text": "আজকের একটি ছোট্ট সহযোগিতা, আগামীকালের একজন সফল সফটওয়্যার ইঞ্জিনিয়ার তৈরি করতে পারে।",
+    "button": "❤️ এখনই দান করুন"
+  },
+  "footer": {
+    "rights": "© ২০২৬ Digital Future Initiative. সর্বস্বত্ব সংরক্ষিত।",
+    "initiated": "Initiated by Sanatani SSC 91"
+  }
+}

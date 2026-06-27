@@ -1,0 +1,200 @@
+{
+  "meta": {
+    "title": "One Computer, One Future | Digital Future Initiative",
+    "description": "An initiative by Sanatani SSC 91 to build Computer Labs, AI, Web Development and Digital Skill Training for orphan children in Bangladesh. Your small donation can change a child's future.",
+    "keywords": "orphan donation, computer donation, bangladesh charity, education donation, AI training, web development, orphan computer lab, digital education, Sanatani SSC 91"
+  },
+  "nav": {
+    "home": "Home",
+    "why": "Why We Started",
+    "vision": "Vision",
+    "roadmap": "Roadmap",
+    "impact": "Impact",
+    "donate": "Donate",
+    "transparency": "Transparency",
+    "faq": "FAQ",
+    "volunteer": "Volunteer",
+    "initiatedBy": "Initiated By Sanatani SSC 91"
+  },
+  "hero": {
+    "badge": "Initiated By Sanatani SSC 91",
+    "heading": "Every child holds infinite potential within.",
+    "subtext": "The child who lags behind today due to lack of opportunity, with the right training tomorrow, can become an AI Engineer, Web Developer, or a successful Freelancer. Our goal is not just to give charity, but to equip them with a skill that stays with them for life.",
+    "donateBtn": "❤️ Donate Now",
+    "planBtn": "📖 See Our Plan"
+  },
+  "whyWeStarted": {
+    "title": "Why We Started?",
+    "content": "There are countless talented children in orphanages across Bangladesh. But they lack Computers, Laptops, Proper Guidance, Modern Education, and Technology Learning Opportunities. As a result, many talents are lost prematurely. We want to change that picture.",
+    "items": [
+      { "label": "Computer", "desc": "Lack of necessary computer equipment" },
+      { "label": "Laptop", "desc": "Education hindered by lack of laptops" },
+      { "label": "Proper Guidance", "desc": "Lack of proper direction" },
+      { "label": "Modern Education", "desc": "No access to modern education" },
+      { "label": "Technology Learning", "desc": "Limited technology learning opportunities" }
+    ]
+  },
+  "vision": {
+    "title": "Our Dream",
+    "content": "In the next five years, bring at least one orphanage completely under a digital education system.",
+    "items": [
+      "Computer Lab",
+      "High Speed Internet",
+      "AI Learning",
+      "Web Development",
+      "Freelancing",
+      "English Communication",
+      "Career Guideline"
+    ]
+  },
+  "roadmap": {
+    "title": "Our Roadmap",
+    "phases": [
+      {
+        "name": "Phase 1",
+        "title": "Infrastructure",
+        "items": ["Computer Collection", "Laptop Collection", "Projector", "Networking"]
+      },
+      {
+        "name": "Phase 2",
+        "title": "Basic Computer",
+        "items": ["Basic Computer", "Typing", "Internet", "Windows", "MS Word", "MS Excel", "PowerPoint", "Google Workspace", "Email"]
+      },
+      {
+        "name": "Phase 3",
+        "title": "Programming",
+        "items": ["Programming", "HTML", "CSS", "JavaScript", "React", "Next.js"]
+      },
+      {
+        "name": "Phase 4",
+        "title": "Advanced",
+        "items": ["Advanced", "AI", "ChatGPT", "Prompt Engineering", "Web Development"]
+      },
+      {
+        "name": "Phase 5",
+        "title": "Career",
+        "items": ["Career", "Freelancing", "CV", "Interview", "Communication", "LinkedIn", "Marketplace", "Portfolio"]
+      }
+    ]
+  },
+  "partners": {
+    "title": "Future Collaboration Plans",
+    "disclaimer": "We will try to collaborate with these institutions in the future. There is currently no formal partnership.",
+    "names": ["Programming Hero", "Ostad", "10 Minute School", "Microsoft Learn", "FreeCodeCamp", "Coursera", "edX"]
+  },
+  "donationImpact": {
+    "title": "Your Donation Impact",
+    "cards": [
+      { "amount": "৳500", "unit": "", "desc": "Computer Training Materials for one student" },
+      { "amount": "৳1,000", "unit": "", "desc": "One Keyboard + Mouse" },
+      { "amount": "৳3,000", "unit": "", "desc": "Used Monitor" },
+      { "amount": "৳5,000", "unit": "", "desc": "Part of a Refurbished Desktop" },
+      { "amount": "৳20,000+", "unit": "", "desc": "Refurbished Laptop" }
+    ]
+  },
+  "donationMethods": {
+    "title": "Donation Methods",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "merchantAccount": "Merchant Account Number",
+    "payment": "Payment",
+    "bkash": {
+      "name": "bKash",
+      "number": "01873007600",
+      "merchantName": "ALOR POTHE"
+    },
+    "nogod": {
+      "name": "Nagad",
+      "number": "01873007600",
+      "merchantName": "ALOR POTHE"
+    },
+    "bank": {
+      "name": "Bank Transfer",
+      "accountName": "Digital Future Initiative",
+      "accountNumber": "XXXXXXXXXXXX",
+      "bankName": "XXXXX Bank Ltd",
+      "branch": "XXXXX Branch",
+      "details": "Account Name: Digital Future Initiative\nAccount Number: XXXXXXXXXXXX\nBank: XXXXX Bank Ltd\nBranch: XXXXX"
+    }
+  },
+  "progress": {
+    "title": "Our Progress",
+    "computers": {
+      "label": "Computers",
+      "goal": "Goal",
+      "collected": "Collected",
+      "need": "Still Need"
+    },
+    "money": {
+      "label": "Donations",
+      "goal": "Goal",
+      "collected": "Collected"
+    },
+    "transparency": {
+      "title": "Transparency Dashboard",
+      "reports": "Monthly Reports",
+      "expenses": "Expense List",
+      "photos": "Photos & Activities",
+      "invoices": "Bills/Invoices",
+      "equipment": "Equipment List",
+      "drive": "Google Drive Reports"
+    }
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "whyDonate": {
+    "title": "Why Donate?",
+    "items": [
+      { "title": "Education", "desc": "Access to quality digital education" },
+      { "title": "Skill", "desc": "Lifelong employable skills" },
+      { "title": "Employment", "desc": "Path to Freelancing and Employment" },
+      { "title": "Future", "desc": "Building a bright future" },
+      { "title": "Confidence", "desc": "Strength to stand on one's own feet" },
+      { "title": "Digital Bangladesh", "desc": "Contributing to the nation" }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "How is my donation used?",
+        "a": "Every donation is directly used for setting up Computer Labs, purchasing laptops, internet connectivity, and student training. Monthly reports and bills are published on our transparency dashboard."
+      },
+      {
+        "q": "Can I donate a laptop?",
+        "a": "Yes, absolutely! We accept any working refurbished laptops or desktops. Please fill out our volunteer form or contact us directly."
+      },
+      {
+        "q": "Can I volunteer?",
+        "a": "You can join our volunteer team. We will assign tasks based on your skills and availability. Fill out the form below."
+      },
+      {
+        "q": "Can I visit the orphanage?",
+        "a": "Yes, we regularly organize visits for donors and volunteers. Please contact us in advance."
+      },
+      {
+        "q": "How are students selected?",
+        "a": "We select students in consultation with the orphanage authorities. Priority is given to those who are talented and eager to learn."
+      }
+    ]
+  },
+  "volunteer": {
+    "title": "Become a Volunteer",
+    "name": "Name",
+    "phone": "Phone",
+    "profession": "Profession",
+    "skills": "Skills",
+    "availability": "Availability",
+    "submit": "Submit",
+    "success": "Your application has been submitted! We will contact you soon."
+  },
+  "footerCTA": {
+    "text": "Today's small contribution can create tomorrow's successful software engineer.",
+    "button": "❤️ Donate Now"
+  },
+  "footer": {
+    "rights": "© 2026 Digital Future Initiative. All rights reserved.",
+    "initiated": "Initiated by Sanatani SSC 91"
+  }
+}
