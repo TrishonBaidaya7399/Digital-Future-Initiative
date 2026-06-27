@@ -1,16 +1,15 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "../ui/AnimatedSection";
 import SectionTitle from "../ui/SectionTitle";
+import Image from "next/image";
 import {
   Monitor,
   Wallet,
   Users,
   GraduationCap,
-  Target,
-  CheckCircle2,
   BarChart3,
   Calculator,
   ImageIcon,
@@ -19,9 +18,20 @@ import {
   ExternalLink,
   TrendingUp,
   Clock,
+  ChevronDown,
+  Download,
+  CheckCircle2,
+  CircleDollarSign,
+  CalendarDays,
+  User,
+  Building,
+  Hash,
+  FileText,
+  FolderOpen,
 } from "lucide-react";
 
 import type { Dictionary } from "@/app/lib/types";
+import { mockTransparencyData } from "@/app/lib/mockData";
 
 function CountUp({
   target,
@@ -146,7 +156,6 @@ function ProgressCard({
         </div>
 
         <div className="space-y-6">
-          {/* Stats row */}
           <div className="grid grid-cols-3 gap-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-foreground">
@@ -168,7 +177,6 @@ function ProgressCard({
             </div>
           </div>
 
-          {/* Progress bar */}
           <div>
             <div className="flex justify-between text-sm mb-2">
               <span className="text-muted-foreground">{collectedLabel}</span>
@@ -190,6 +198,304 @@ function ProgressCard({
   );
 }
 
+// ─── Transparency Item Component ───
+function TransparencyItem({
+  icon: Icon,
+  label,
+  color,
+  isOpen,
+  onClick,
+  children,
+}: {
+  icon: React.ElementType;
+  label: string;
+  color: string;
+  isOpen: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-sm">
+      <button
+        onClick={onClick}
+        className="flex w-full items-center justify-between p-5 text-left hover:bg-muted/30 transition-colors"
+      >
+        <div className="flex items-center gap-4">
+          <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${color} shadow-md`}>
+            <Icon className="h-5 w-5 text-white" />
+          </div>
+          <span className="text-base font-bold text-foreground">{label}</span>
+        </div>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="text-muted-foreground"
+        >
+          <ChevronDown className="h-5 w-5" />
+        </motion.div>
+      </button>
+
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-border px-5 pb-5 pt-4">{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
+// ─── Data Views ───
+function ReportsView() {
+  return (
+    <div className="space-y-4">
+      {mockTransparencyData.reports.map((report, idx) => (
+        <div
+          key={idx}
+          className="rounded-xl border border-border bg-background p-5 hover:shadow-sm transition-shadow"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3">
+            <div className="flex items-center gap-2">
+              <CalendarDays className="h-4 w-4 text-primary" />
+              <span className="font-bold text-foreground">{report.month}</span>
+              <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+                {report.status === "published" ? "প্রকাশিত" : "Draft"}
+              </span>
+            </div>
+            <button className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+              <Download className="h-4 w-4" />
+              PDF ডাউনলোড
+            </button>
+          </div>
+          <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{report.summary}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="rounded-lg bg-muted p-3 text-center">
+              <p className="text-lg font-bold text-emerald-600">৳{report.totalDonation.toLocaleString()}</p>
+              <p className="text-xs text-muted-foreground">মোট অনুদান</p>
+            </div>
+            <div className="rounded-lg bg-muted p-3 text-center">
+              <p className="text-lg font-bold text-red-500">৳{report.totalExpense.toLocaleString()}</p>
+              <p className="text-xs text-muted-foreground">মোট ব্যয়</p>
+            </div>
+            <div className="rounded-lg bg-muted p-3 text-center">
+              <p className="text-lg font-bold text-blue-600">{report.computersBought}</p>
+              <p className="text-xs text-muted-foreground">কম্পিউটার ক্রয়</p>
+            </div>
+            <div className="rounded-lg bg-muted p-3 text-center">
+              <p className="text-lg font-bold text-violet-600">{report.studentsTrained}</p>
+              <p className="text-xs text-muted-foreground">শিক্ষার্থী প্রশিক্ষণ</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ExpensesView() {
+  return (
+    <div className="overflow-x-auto rounded-xl border border-border">
+      <table className="w-full text-sm">
+        <thead className="bg-muted">
+          <tr>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">তারিখ</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">বিবরণ</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">ক্যাটাগরি</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">বিক্রেতা</th>
+            <th className="px-4 py-3 text-right font-semibold text-foreground">পরিমাণ</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-border">
+          {mockTransparencyData.expenses.map((exp, idx) => (
+            <tr key={idx} className="bg-card hover:bg-muted/30 transition-colors">
+              <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{exp.date}</td>
+              <td className="px-4 py-3 text-foreground font-medium">{exp.item}</td>
+              <td className="px-4 py-3">
+                <span className="inline-flex rounded-md bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-700">
+                  {exp.category}
+                </span>
+              </td>
+              <td className="px-4 py-3 text-muted-foreground">{exp.vendor}</td>
+              <td className="px-4 py-3 text-right font-bold text-foreground">৳{exp.amount.toLocaleString()}</td>
+            </tr>
+          ))}
+        </tbody>
+        <tfoot className="bg-muted">
+          <tr>
+            <td colSpan={4} className="px-4 py-3 text-right font-bold text-foreground">মোট ব্যয়</td>
+            <td className="px-4 py-3 text-right font-bold text-red-500">
+              ৳{mockTransparencyData.expenses.reduce((sum, e) => sum + e.amount, 0).toLocaleString()}
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  );
+}
+
+function PhotosView() {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {mockTransparencyData.photos.map((photo, idx) => (
+        <div
+          key={idx}
+          className="group rounded-xl border border-border bg-card overflow-hidden hover:shadow-md transition-all"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src={photo.src}
+              alt={photo.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+          </div>
+          <div className="p-4">
+            <p className="text-sm font-bold text-foreground mb-1">{photo.title}</p>
+            <div className="flex items-center gap-1 text-xs text-muted-foreground mb-2">
+              <CalendarDays className="h-3 w-3" />
+              {photo.date}
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">{photo.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function InvoicesView() {
+  return (
+    <div className="overflow-x-auto rounded-xl border border-border">
+      <table className="w-full text-sm">
+        <thead className="bg-muted">
+          <tr>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">ইনভয়েস নং</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">তারিখ</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">বিক্রেতা</th>
+            <th className="px-4 py-3 text-left font-semibold text-foreground">আইটেম</th>
+            <th className="px-4 py-3 text-right font-semibold text-foreground">পরিমাণ</th>
+            <th className="px-4 py-3 text-center font-semibold text-foreground">স্ট্যাটাস</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-border">
+          {mockTransparencyData.invoices.map((inv, idx) => (
+            <tr key={idx} className="bg-card hover:bg-muted/30 transition-colors">
+              <td className="px-4 py-3 font-mono text-xs text-primary font-bold">{inv.invoiceNo}</td>
+              <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{inv.date}</td>
+              <td className="px-4 py-3 text-muted-foreground">{inv.vendor}</td>
+              <td className="px-4 py-3 text-foreground">{inv.items}</td>
+              <td className="px-4 py-3 text-right font-bold text-foreground">৳{inv.amount.toLocaleString()}</td>
+              <td className="px-4 py-3 text-center">
+                <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+                  <CheckCircle2 className="h-3 w-3" />
+                  Paid
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function EquipmentView() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {mockTransparencyData.equipment.map((eq, idx) => (
+        <div
+          key={idx}
+          className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 hover:shadow-sm transition-shadow"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+            <Package className="h-6 w-6" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center justify-between gap-2 mb-1">
+              <h4 className="text-sm font-bold text-foreground truncate">{eq.name}</h4>
+              <span className="inline-flex rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 shrink-0">
+                {eq.condition}
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground mb-2">{eq.specs}</p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1">
+                <Hash className="h-3 w-3" />
+                {eq.quantity}টি
+              </span>
+              <span className="flex items-center gap-1">
+                <User className="h-3 w-3" />
+                {eq.donatedBy}
+              </span>
+              <span className="flex items-center gap-1">
+                <CalendarDays className="h-3 w-3" />
+                {eq.date}
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function DriveView() {
+  return (
+    <div className="space-y-5">
+      <div className="rounded-xl border border-border bg-card p-5">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-sky-100 text-sky-600">
+              <FolderOpen className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="font-bold text-foreground">Google Drive Folder</p>
+              <p className="text-xs text-muted-foreground">সর্বশেষ আপডেট: {mockTransparencyData.drive.lastUpdated}</p>
+            </div>
+          </div>
+          <a
+            href={mockTransparencyData.drive.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary/90 transition-colors"
+          >
+            <ExternalLink className="h-4 w-4" />
+            খুলুন
+          </a>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          {mockTransparencyData.drive.folders.map((folder, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center gap-2 rounded-xl border border-border bg-background p-4 text-center hover:shadow-sm transition-shadow cursor-pointer"
+            >
+              <FolderOpen className="h-8 w-8 text-sky-500" />
+              <span className="text-xs font-semibold text-foreground leading-tight">{folder.name}</span>
+              <span className="text-xs text-muted-foreground">{folder.count}টি ফাইল</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+        <p className="flex items-center gap-2">
+          <FileText className="h-4 w-4 shrink-0" />
+          সব ডকুমেন্ট, রিপোর্ট এবং ছবি Google Drive-এ নিয়মিত আপডেট করা হয়।
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function Progress({ dict }: { dict: Dictionary }) {
   const computerGoal = 20;
   const computerCollected = 7;
@@ -198,41 +504,22 @@ export default function Progress({ dict }: { dict: Dictionary }) {
   const moneyCollected = 85000;
   const moneyNeed = moneyGoal - moneyCollected;
 
-  // Dashboard stat cards data
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const stats = [
-    {
-      icon: Monitor,
-      label: dict.progress.computers.collected,
-      value: computerCollected,
-      color: "bg-blue-600",
-    },
-    {
-      icon: Wallet,
-      label: dict.progress.money.collected,
-      value: `৳${moneyCollected.toLocaleString()}`,
-      color: "bg-emerald-600",
-    },
-    {
-      icon: Users,
-      label: "স্বেচ্ছাসেবক",
-      value: 12,
-      color: "bg-violet-600",
-    },
-    {
-      icon: GraduationCap,
-      label: "শিক্ষার্থী",
-      value: 25,
-      color: "bg-amber-600",
-    },
+    { icon: Monitor, label: dict.progress.computers.collected, value: computerCollected, color: "bg-blue-600" },
+    { icon: Wallet, label: dict.progress.money.collected, value: `৳${moneyCollected.toLocaleString()}`, color: "bg-emerald-600" },
+    { icon: Users, label: "স্বেচ্ছাসেবক", value: 12, color: "bg-violet-600" },
+    { icon: GraduationCap, label: "শিক্ষার্থী", value: 25, color: "bg-amber-600" },
   ];
 
   const transparencyItems = [
-    { icon: BarChart3, label: dict.progress.transparency.reports, color: "bg-blue-500" },
-    { icon: Calculator, label: dict.progress.transparency.expenses, color: "bg-emerald-500" },
-    { icon: ImageIcon, label: dict.progress.transparency.photos, color: "bg-pink-500" },
-    { icon: FileCheck, label: dict.progress.transparency.invoices, color: "bg-amber-500" },
-    { icon: Package, label: dict.progress.transparency.equipment, color: "bg-violet-500" },
-    { icon: ExternalLink, label: dict.progress.transparency.drive, color: "bg-sky-500" },
+    { icon: BarChart3, label: dict.progress.transparency.reports, color: "bg-blue-500", view: <ReportsView /> },
+    { icon: Calculator, label: dict.progress.transparency.expenses, color: "bg-emerald-500", view: <ExpensesView /> },
+    { icon: ImageIcon, label: dict.progress.transparency.photos, color: "bg-pink-500", view: <PhotosView /> },
+    { icon: FileCheck, label: dict.progress.transparency.invoices, color: "bg-amber-500", view: <InvoicesView /> },
+    { icon: Package, label: dict.progress.transparency.equipment, color: "bg-violet-500", view: <EquipmentView /> },
+    { icon: ExternalLink, label: dict.progress.transparency.drive, color: "bg-sky-500", view: <DriveView /> },
   ];
 
   return (
@@ -270,7 +557,6 @@ export default function Progress({ dict }: { dict: Dictionary }) {
             icon={Monitor}
             delay={0.1}
           />
-
           <ProgressCard
             label={dict.progress.money.label}
             collected={moneyCollected}
@@ -297,32 +583,21 @@ export default function Progress({ dict }: { dict: Dictionary }) {
               </h3>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {transparencyItems.map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.08 }}
-                    viewport={{ once: true }}
-                    className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-background p-5 text-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer"
-                  >
-                    <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.color} shadow-lg`}
-                    >
-                      <Icon className="h-6 w-6 text-white" />
-                    </div>
-                    <span className="text-sm font-semibold text-foreground leading-tight">
-                      {item.label}
-                    </span>
-                  </motion.div>
-                );
-              })}
+            <div className="space-y-4">
+              {transparencyItems.map((item, idx) => (
+                <TransparencyItem
+                  key={idx}
+                  icon={item.icon}
+                  label={item.label}
+                  color={item.color}
+                  isOpen={openIndex === idx}
+                  onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                >
+                  {item.view}
+                </TransparencyItem>
+              ))}
             </div>
 
-            {/* Last Updated */}
             <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <Clock className="h-4 w-4" />
               <span>সর্বশেষ আপডেট: জুন ২০২৬</span>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import type { Dictionary } from "@/app/lib/types";
+import Image from "next/image";
 
 export default function Footer({
   locale,
@@ -19,6 +20,25 @@ export default function Footer({
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               {dict.footer.initiated}
+            </p>
+            <p className="text-xs text-muted-foreground mt-2 flex flex-row items-center gap-2">
+              {dict.footer.developedBy}{" "}
+              <Image
+                height={100}
+                width={100}
+                alt="Trishon Baidaya - Full Stack Web Developer"
+                src="/developer/trishon.jpg"
+                className="h-7 w-7   border-primary border rounded-full"
+
+              />
+              <a
+                href="https://trishon-baidaya.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary hover:text-primary/80 transition-colors text-lg"
+              >
+                Trishon Baidaya
+              </a>
             </p>
           </div>
           <div className="flex items-center gap-4">

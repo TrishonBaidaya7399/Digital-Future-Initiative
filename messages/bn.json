@@ -28,7 +28,6 @@
     "content": "বাংলাদেশের বিভিন্ন অনাথ আশ্রমে অসংখ্য মেধাবী শিশু রয়েছে। কিন্তু— তাদের কাছে নেই Computer, Laptop, Proper Guidance, Modern Education, Technology Learning Opportunity। ফলে অনেক প্রতিভা অকালেই হারিয়ে যায়। আমরা সেই চিত্র বদলাতে চাই।",
     "items": [
       { "label": "Computer", "desc": "প্রয়োজনীয় কম্পিউটার সরঞ্জামের অভাব" },
-      { "label": "Laptop", "desc": "ল্যাপটপের অভাবে শিক্ষা ব্যাহত" },
       { "label": "Proper Guidance", "desc": "সঠিক দিকনির্দেশনার অভাব" },
       { "label": "Modern Education", "desc": "আধুনিক শিক্ষার সুযোগ নেই" },
       { "label": "Technology Learning", "desc": "টেকনোলজি শেখার সুযোগ সীমিত" }
@@ -195,6 +194,7 @@
   },
   "footer": {
     "rights": "© ২০২৬ Digital Future Initiative. সর্বস্বত্ব সংরক্ষিত।",
-    "initiated": "Initiated by Sanatani SSC 91"
+    "initiated": "Initiated by Sanatani SSC 91",
+    "developedBy": "Developed By:"
   }
 }

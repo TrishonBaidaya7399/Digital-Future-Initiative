@@ -68,5 +68,9 @@ export interface Dictionary {
   };
   volunteer: Record<string, string>;
   footerCTA: Record<string, string>;
-  footer: Record<string, string>;
+  footer: {
+    rights: string;
+    initiated: string;
+    developedBy: string;
+  };
 }

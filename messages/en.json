@@ -31,7 +31,10 @@
       { "label": "Laptop", "desc": "Education hindered by lack of laptops" },
       { "label": "Proper Guidance", "desc": "Lack of proper direction" },
       { "label": "Modern Education", "desc": "No access to modern education" },
-      { "label": "Technology Learning", "desc": "Limited technology learning opportunities" }
+      {
+        "label": "Technology Learning",
+        "desc": "Limited technology learning opportunities"
+      }
     ]
   },
   "vision": {
@@ -53,42 +56,95 @@
       {
         "name": "Phase 1",
         "title": "Infrastructure",
-        "items": ["Computer Collection", "Laptop Collection", "Projector", "Networking"]
+        "items": [
+          "Computer Collection",
+          "Laptop Collection",
+          "Projector",
+          "Networking"
+        ]
       },
       {
         "name": "Phase 2",
         "title": "Basic Computer",
-        "items": ["Basic Computer", "Typing", "Internet", "Windows", "MS Word", "MS Excel", "PowerPoint", "Google Workspace", "Email"]
+        "items": [
+          "Basic Computer",
+          "Typing",
+          "Internet",
+          "Windows",
+          "MS Word",
+          "MS Excel",
+          "PowerPoint",
+          "Google Workspace",
+          "Email"
+        ]
       },
       {
         "name": "Phase 3",
         "title": "Programming",
-        "items": ["Programming", "HTML", "CSS", "JavaScript", "React", "Next.js"]
+        "items": [
+          "Programming",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Next.js"
+        ]
       },
       {
         "name": "Phase 4",
         "title": "Advanced",
-        "items": ["Advanced", "AI", "ChatGPT", "Prompt Engineering", "Web Development"]
+        "items": [
+          "Advanced",
+          "AI",
+          "ChatGPT",
+          "Prompt Engineering",
+          "Web Development"
+        ]
       },
       {
         "name": "Phase 5",
         "title": "Career",
-        "items": ["Career", "Freelancing", "CV", "Interview", "Communication", "LinkedIn", "Marketplace", "Portfolio"]
+        "items": [
+          "Career",
+          "Freelancing",
+          "CV",
+          "Interview",
+          "Communication",
+          "LinkedIn",
+          "Marketplace",
+          "Portfolio"
+        ]
       }
     ]
   },
   "partners": {
     "title": "Future Collaboration Plans",
     "disclaimer": "We will try to collaborate with these institutions in the future. There is currently no formal partnership.",
-    "names": ["Programming Hero", "Ostad", "10 Minute School", "Microsoft Learn", "FreeCodeCamp", "Coursera", "edX"]
+    "names": [
+      "Programming Hero",
+      "Ostad",
+      "10 Minute School",
+      "Microsoft Learn",
+      "FreeCodeCamp",
+      "Coursera",
+      "edX"
+    ]
   },
   "donationImpact": {
     "title": "Your Donation Impact",
     "cards": [
-      { "amount": "৳500", "unit": "", "desc": "Computer Training Materials for one student" },
+      {
+        "amount": "৳500",
+        "unit": "",
+        "desc": "Computer Training Materials for one student"
+      },
       { "amount": "৳1,000", "unit": "", "desc": "One Keyboard + Mouse" },
       { "amount": "৳3,000", "unit": "", "desc": "Used Monitor" },
-      { "amount": "৳5,000", "unit": "", "desc": "Part of a Refurbished Desktop" },
+      {
+        "amount": "৳5,000",
+        "unit": "",
+        "desc": "Part of a Refurbished Desktop"
+      },
       { "amount": "৳20,000+", "unit": "", "desc": "Refurbished Laptop" }
     ]
   },
@@ -161,10 +217,7 @@
         "q": "How is my donation used?",
         "a": "Every donation is directly used for setting up Computer Labs, purchasing laptops, internet connectivity, and student training. Monthly reports and bills are published on our transparency dashboard."
       },
-      {
-        "q": "Can I donate a laptop?",
-        "a": "Yes, absolutely! We accept any working refurbished laptops or desktops. Please fill out our volunteer form or contact us directly."
-      },
+
       {
         "q": "Can I volunteer?",
         "a": "You can join our volunteer team. We will assign tasks based on your skills and availability. Fill out the form below."
@@ -195,6 +248,7 @@
   },
   "footer": {
     "rights": "© 2026 Digital Future Initiative. All rights reserved.",
-    "initiated": "Initiated by Sanatani SSC 91"
+    "initiated": "Initiated by Sanatani SSC 91",
+    "developedBy": "Developed by:"
   }
 }
